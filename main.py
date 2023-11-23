@@ -3,7 +3,7 @@ from random import choice, sample
 GAME_SYMBOLS = 'XO'
 
 
-def check_diagonals(field):
+def check_diagonals(field: list[list[int]]) -> str | None:
     diagonal_1 = []
     diagonal_2 = []
     size = len(field)
@@ -17,7 +17,7 @@ def check_diagonals(field):
             return symbol
 
 
-def check_winner(field):
+def check_winner(field: list[list[int]]) -> str | None:
     size = len(field)
     rotated_field = (list(zip(*field)))
 
